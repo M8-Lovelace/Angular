@@ -14,9 +14,9 @@ export class AgregarComponent {
     power: 0,
   };
 
-  // Función que valia el nuevo usuario y lo envía al padre por medio del emmit
   addForm() {
     if (this.newCharacter.name.trim().length === 0) return;
+    // debugger;
     this.dbzService.addPersonajesDBZ(this.newCharacter);
     this.newCharacter = { name: '', power: 0 };
   }
